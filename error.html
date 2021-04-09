@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>System Down</title>
+
+    <style>
+        :root {
+            --text-gray-5: #080e19;
+            --text-gray-3: #61656c;
+            --text-white-inverse: #fffffa;
+
+            --page-bg-1: #fff;
+            --card-light: #fefeff;
+            --primary-blue-500: #0565ff;
+            --secondary-magenta-500: #d341a5;
+        }
+
+        *, *::after, *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            box-sizing: border-box;
+            height: 100%;
+            font-family: 'Inter', sans-serif;
+            background: var(--page-bg-1);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .card {
+            position: relative;
+            width: 35rem;
+            height: 24.375rem;
+            padding: 3.875rem 0 2.5rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px 0 rgba(41, 45, 55, 0.16);
+            background: var(--card-light);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card::before {
+            content: "";
+            width: 17.5rem;
+            height: 4px;
+            border-radius: 8px 0 0;
+            background: var(--primary-blue-500);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+        }
+
+        .card::after {
+            content: "";
+            width: 17.5rem;
+            height: 4px;
+            border-radius: 0 8px 0 0;
+            background: var(--secondary-magenta-500);
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .card .heading {
+            margin: 1.75rem 0 .5rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.5;
+            letter-spacing: -0.5px;
+            text-align: center;
+            color: var(--text-gray-5);
+        }
+
+        .card .text {
+            margin: 0 0 1.5rem 0;
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: 1.57;
+            letter-spacing: -0.1px;
+            text-align: center;
+            color: var(--text-gray-3);
+        }
+
+        .card .image-fluid {
+            width: 140px;
+            height: 140px;
+            object-fit: contain;
+        }
+
+        .primary-btn {
+            font-size: 0.875rem;
+            line-height: 1.57;
+            letter-spacing: -0.1px;
+            text-align: center;
+            padding: .4375rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            color: var(--text-white-inverse);
+            background-color: var(--primary-blue-500);
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img class="image-fluid" src="./rectangle.svg" alt="Maze">
+            <h3 class="heading">Uh-oh! Look like something went wrong on our end</h3>
+            <p class="text">Take a short break and come back later as our team is on it already</p>
+            <a href="#" class="primary-btn">Check status</a>
+        </div>
+    </div>
+</body>
+</html>
